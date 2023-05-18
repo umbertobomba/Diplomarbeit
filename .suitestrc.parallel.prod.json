@@ -1,0 +1,27 @@
+{
+    "extends": ".suitestrc.base.json",
+    "preset": ["tv01Panasonic", "tv05Samsung", "tv09Philips", "tv11Philips", "tv12Samsung"],
+    "presets": {
+      "tv01Panasonic": {
+        "device": "97f7e16c-f1a4-4bbe-8948-9b074cd7296d",
+        "config": "ac2ad4a1-fe09-4d2d-9f59-c2dce08b9772"
+      },
+      "tv05Samsung": {
+        "device": "3c28cdd9-7039-4f86-b596-6c0b85b15637",
+        "config": "ac2ad4a1-fe09-4d2d-9f59-c2dce08b9772"
+      },
+      "tv09Philips": {
+        "device": "3c91cbd2-98e8-477c-98cc-6fae9e5f6bb4",
+        "config": "ac2ad4a1-fe09-4d2d-9f59-c2dce08b9772"
+      },
+      "tv11Philips": {
+        "device": "06eccba4-725b-4bd9-80d5-0eb06725b37c",
+        "config": "ac2ad4a1-fe09-4d2d-9f59-c2dce08b9772"
+      },
+      "tv12Samsung": {
+        "device": "681d51a4-b755-4447-b698-0926969bb26a",
+        "config": "ac2ad4a1-fe09-4d2d-9f59-c2dce08b9772"
+      }
+    }
+  }
+  

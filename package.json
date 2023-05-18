@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.1.3",
+    "suitest-js-api": "^3.9.0",
+    "sync-request": "^6.1.0"
+  },
+  "scripts": {
+    "regression": "suitest run mocha --reporter-options reportTitle=DEVICE_ID-'\"${SUITEST_CHILD_PROCESS%%|*}\"' --no-timeouts --exit ./suitest_tests/regressionTests.js",
+    "regression:mochawesome": "suitest run mocha --reporter mochawesome --reporter-options reportTitle=DEVICE_ID-'\"${SUITEST_CHILD_PROCESS%%|*}\"',reportFilename='\"${SUITEST_CHILD_PROCESS%%|*}\"',reportDir='./reports/html',autoOpen=true  --no-timeouts --exit \"./suitest_tests/regressionTests.js\"",
+    "regression:parallel:dev": "suitest run --base-config-file .suitestrc.parallel.dev.json mocha --reporter=./utils/slackTestReporter.js --device-id='\"${SUITEST_CHILD_PROCESS%%|*}\"'  --no-timeouts --exit \"./suitest_tests/regressionTests.js\"",
+    "regression:parallel:int": "suitest run --base-config-file .suitestrc.parallel.int.json mocha --reporter=./utils/slackTestReporter.js --device-id='\"${SUITEST_CHILD_PROCESS%%|*}\"'  --no-timeouts --exit \"./suitest_tests/regressionTests.js\"",
+    "regression:parallel:prod": "suitest run --base-config-file .suitestrc.parallel.prod.json mocha --reporter=./utils/slackTestReporter.js --device-id='\"${SUITEST_CHILD_PROCESS%%|*}\"'  --no-timeouts --exit \"./suitest_tests/regressionTests.js\""
+  }
+}

@@ -1,0 +1,5 @@
+node_modules
+.suitestrc
+.suitestrc.base.json
+reports
+mochawesome-report
