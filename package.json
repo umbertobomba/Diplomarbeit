@@ -7,6 +7,7 @@
   },
   "scripts": {
     "regression": "suitest run mocha --reporter-options reportTitle=DEVICE_ID-'\"${SUITEST_CHILD_PROCESS%%|*}\"' --no-timeouts --exit ./suitest_tests/regressionTests.js",
+    "regression:videoPlayer": "suitest run mocha --reporter-options reportTitle=DEVICE_ID-'\"${SUITEST_CHILD_PROCESS%%|*}\"' --no-timeouts --exit ./suitest_tests/videoPlayerTests.js",
     "regression:mochawesome": "suitest run mocha --reporter mochawesome --reporter-options reportTitle=DEVICE_ID-'\"${SUITEST_CHILD_PROCESS%%|*}\"',reportFilename='\"${SUITEST_CHILD_PROCESS%%|*}\"',reportDir='./reports/html',autoOpen=true  --no-timeouts --exit \"./suitest_tests/regressionTests.js\"",
     "regression:parallel:dev": "suitest run --base-config-file .suitestrc.parallel.dev.json mocha --reporter=./utils/slackTestReporter.js --device-id='\"${SUITEST_CHILD_PROCESS%%|*}\"'  --no-timeouts --exit \"./suitest_tests/regressionTests.js\"",
     "regression:parallel:int": "suitest run --base-config-file .suitestrc.parallel.int.json mocha --reporter=./utils/slackTestReporter.js --device-id='\"${SUITEST_CHILD_PROCESS%%|*}\"'  --no-timeouts --exit \"./suitest_tests/regressionTests.js\"",
